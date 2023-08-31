@@ -713,3 +713,14 @@ div.autoseg span.autoseg {
 	/* text-shadow: none !important; */
 	text-shadow: rgb(0, 0, 0) 1px 1px 5px !important;
 }
+
+.background0 {
+	stroke: none;
+	fill: #ffffff;
+	opacity: 0;
+}
+
+svg {
+	font-size: 36pt;
+	border: none;
+}
