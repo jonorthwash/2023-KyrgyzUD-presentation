@@ -723,4 +723,45 @@ div.autoseg span.autoseg {
 svg {
 	font-size: 36pt;
 	border: none;
+	height: 320px !important;
+}
+
+text {
+	font-size: 36px;
+}
+
+.arcs text {
+	font-size: 30px;
+	fill: white;
+}
+
+.arcs .highlight text {
+	font-size: 30px;
+	fill: white;
+	stroke: white;
+}
+
+.span text {
+	font-size: 34px;
+}
+
+path {
+	stroke: white !important;
+}
+
+.arcs path {
+	stroke-width: 3.5;
+	stroke: white;
+}
+
+.arcs .highlight path {
+	stroke-width: 4;
+}
+
+#arrow_triangle_5_black, #arrow_triangle_3_5_black {
+	fill: white !important ;
+}
+
+.glyph {
+	display: none;
 }
