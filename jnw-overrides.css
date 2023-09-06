@@ -721,28 +721,27 @@ div.autoseg span.autoseg {
 }
 
 svg {
-	font-size: 36pt;
+	font-size: 24pt;
 	border: none;
-	height: 320px !important;
 }
 
 text {
-	font-size: 36px;
+	font-size: 24px;
 }
 
 .arcs text {
-	font-size: 30px;
+	font-size: 20px;
 	fill: white;
 }
 
 .arcs .highlight text {
-	font-size: 30px;
-	fill: white;
-	stroke: white;
+	font-size: 20px;
+	fill: cyan;
+	stroke: cyan;
 }
 
 .span text {
-	font-size: 34px;
+	font-size: 24px;
 }
 
 path {
@@ -764,4 +763,12 @@ path {
 
 .glyph {
 	display: none;
+}
+
+pre.code-wrapper {
+	width: 100%;
+}
+
+div.haserror > svg {
+	border: none !important;
 }
