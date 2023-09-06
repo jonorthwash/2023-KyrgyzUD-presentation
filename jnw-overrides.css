@@ -483,6 +483,13 @@ table.nolines tbody tr:last-child {
 	margin: 1em !important ;
 }
 
+.box-red {
+	border: 2pt solid #e05b58 !important ;
+	padding: 10pt !important ;
+	margin: 1em !important ;
+}
+
+
 .smallerbox {
 	border: 2pt solid silver !important ;
 	padding-right: 10pt !important ;
@@ -578,8 +585,7 @@ tt {
 	margin-bottom: 0pt;
 	text-align: left ;
 }
-.box h3 {
-	border-bottom: 1px solid lightgreen !important ;
+.box h3, .box-red h3 {
 	font-family: "DejaVu Sans", "Liberation Sans", sans-serif !important ;
 	text-transform: none !important ;
 	text-shadow: none !important ;
@@ -589,6 +595,13 @@ tt {
 	font-weight: bold ;
 }
 
+.box-red h3 {
+	border-bottom: 1px solid #e05b58 !important ;
+}
+
+.box h3 {
+	border-bottom: 1px solid lightgreen !important ;
+}
 
 .inline-ex {
 	color: lightgreen ;
