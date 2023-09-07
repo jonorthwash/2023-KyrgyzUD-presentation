@@ -381,6 +381,45 @@
 					<h2> Challenges: small words: да</h2>
 				</section>
 
+				<section data-state="show-bar">
+					<h2> Challenges: small words: бар/жок</h2>
+					<pre id="showbar"><code class="conllu">
+# sent_id = proverbs:47
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:282
+# text = Колунда токочу бар бала сүйгүнчүктүү.
+# text[eng] = The child with a loaf (of bread) in their hand is darling.
+# text[gloss] = in.their.hand their.loaf present child darling is .
+# labels = cg-checked-jnw dep-checked-jnw
+1	Колунда	кол	NOUN	_	Case=Loc|Number[psor]=Plur,Sing|Person[psor]=3	3	obl	_	_
+2	токочу	токоч	NOUN	_	Case=Nom|Number[psor]=Plur,Sing|Person[psor]=3	3	nsubj	_	_
+3	бар	бар	ADJ	_	_	4	acl	_	_
+4	бала	бала	NOUN	_	Case=Nom	5	nsubj	_	_
+5-6	сүйгүнчүктүү	_	_	_	_	_	_	_	_
+5	сүйгүнчүктүү	сүйгүнчүктүү	ADJ	_	_	0	root	_	_
+6	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	5	cop	_	_
+7	.	.	PUNCT	_	_	5	punct	_	_
+					</code></pre>
+
+					<pre><code class="conllu">
+# sent_id = proverbs:2
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:363
+# text = Өрдөк жокто, чулдук бий.
+# text[eng] = Upon the absence of the/a duck, (the) sandpiper (is) ~king.
+# text[gloss] = duck absent.LOC , sandpiper ~king is .
+# labels = cg-checked-jnw dep-revised1x-jnw
+1	Өрдөк	өрдөк	NOUN	_	Case=Nom	2	nsubj	_	_
+2	жокто	жок,	ADJ	_	Case=Loc	5	advcl	_	_
+3	,	,	PUNCT	_	_	5	punct	_	_
+4	чулдук	чулдук	NOUN	_	Case=Nom	5	nsubj	_	_
+5-6	бий	_	_	_	_	_	_	_	_
+5	бий	бий	NOUN	_	Case=Nom	0	root	_	_
+6	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	5	cop	_	_
+7	.	.	PUNCT	_	_	5	punct	_	_
+					</code></pre>
+
+				</section>
 
 				<section>
 					<h2></h2>
@@ -451,9 +490,44 @@
 				</section>
 
 				<section>
-					<h2> Challenges: level of analysis</h2>
+					<h2>Challenges: level of analysis</h2>
+					<div class="box">
+						<h3>Inflected</h3>
+							<pre><code class="conllu">
+# text[gloss] = person error-less is.not , marsh frog-less is.not .
+1	Адам	адам	NOUN	n	_	4	nsubj	_	nom
+2-3	катасыз	_	_	_	_	_	_	_	_
+2	ката	ката	NOUN	n	_	4	xcomp	_	_
+3	сыз	сыз	ADP	post	_	2	case	_	_
+4	болбос	бол	VERB	v	_	0	root	_	iv|neg|fut|p3|sg
+5	,	,	_	cm	PUNCT	4	punct	_	_
+6	саз	саз	NOUN	n	_	9	nsubj	_	acc-ind
+7-8	бакасыз	_	_	_	_	_	_	_	_
+7	бака	бака	NOUN	n	_	9	xcomp	_	_
+8	сыз	сыз	ADP	post	_	7	case	_	_
+9	болбос	бол	VERB	v	_	4	conj/parataxis	_	iv|neg|fut|p3|sg
+10	.	.	PUNCT	sent	_	9	punct	_	_
+						</code></pre>
+					</div>
+					<div class="box">
+						<h3>Derivational</h3>
+							<pre><code class="conllu">
+# text[gloss] = person errorless is.not , marsh frogless is.not .
+1	Адам	адам	NOUN	n	_	3	nsubj	_	nom
+2	катасыз	катасыз	ADJ	n	_	3	xcomp	_	_
+3	болбос	бол	VERB	v	_	0	root	_	iv|neg|fut|p3|sg
+4	,	,	_	cm	PUNCT	3	punct	_	_
+5	саз	саз	NOUN	n	_	7	nsubj	_	acc-ind
+6	бакасыз	бакасыз	ADJ	n	_	7	xcomp	_	_
+7	болбос	бол	VERB	v	_	3	conj/parataxis	_	iv|neg|fut|p3|sg
+8	.	.	PUNCT	sent	_	7	punct	_	_
+						</code></pre>
+					</div>
 				</section>
 
+				<section>
+					<h2>Ракмат!</h2>
+				</section>
 
 
 			</div>
@@ -575,6 +649,28 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealZoom, RevealHighlight, RevealNotes ]
 			});
+
+
+			Reveal.addEventListener('show-bar', function() {
+				// var elem = $("#showbar").find("text:contains('ADJ')").parent();
+				// elem.addClass("highlight");
+				/** var elem = $("#showbar").find("text:contains('ADJ')");
+				console.log(elem);
+				var elem_rect = elem.parent().find(".span_ADJ");
+				console.log(elem_rect);
+				originSpanId = elem_rect.data("span-id");
+				var targetSpanId = "embedded-13-S1-T2";
+				console.log(originSpanId);
+				highlightArcs = $("#showbar").
+					find('g[data-from="' + originSpanId + '"][data-to="' + targetSpanId + '"]').
+					addClass('highlight');
+          highlightSpans = $("#showbar").
+              find('rect[data-span-id="' + originSpanId + '"], rect[data-span-id="' + targetSpanId + '"]').
+              parent().
+              addClass('highlight'); **/
+
+			});
+
 
 		</script>
 
