@@ -174,20 +174,24 @@
 
 				<section>
 					<h2>Challenges: copula tokenisation</h2>
+						<div class="box">
+							<h3>Defective copula verb <ex>э-</ex></h3>
+							<ul>
+								<li>Irregular attested forms:</li>
+								<ul class="shrink">
+									<li><span class="highlight">non-past tense</span>: endings on predicate (<ex>үйдөмүн</ex>, not <ex class="bad">үйдө эймин</ex>)</li>
+									<li><span class="highlight">direct past tense</span>: <ex>эле</ex> (not <ex class="bad">эди</ex>) + past-tense person endings</li>
+									<li>irregular-looking <span class="highlight">past verbal noun</span>: <ex>экен</ex> (not <ex class="bad">эген</ex>)</li>
+								</ul>
+								<li>other words derived from <ex>э-</ex>: <ex>эмес</ex> <gl>not</gl>, <ex>экен</ex> <gl>evidently</gl></li>
+								<li>Missing other forms:</li>
+								<ul class="shrink">
+									<li>tenses, non-finite forms: <ex class="bad">эчү</ex>, <ex class="bad">эген</ex>, <ex class="bad">өө</ex>, <ex class="bad">эш</ex>, <ex class="bad">ээр</ex>, <ex class="bad">эп</ex>, <ex class="bad">эй</ex>, etc.</li>
+									<li>negative forms: <ex class="bad">эбеле</ex></.i>
+								</ul>
+							</div>
 						<ul>
-							<li>Defective verb <ex>э</ex>:</li>
-							<ul>
-								<li><span class="highlight">non-past tense</span>: copula endings on predicate</li>
-								<li><span class="highlight">direct past tense</span>: <ex>эле</ex> (not <ex class="bad">эди</ex>) + past-tense person endings</li>
-								<li>irregular-looking <span class="highlight">past verbal noun</span>: <ex>экен</ex> (not <ex class="bad">эген</ex>)</li>
-								<li>other words derived from <ex>э</ex>: <ex>эмес</ex> <gl>not</gl>, <ex>экен</ex> <gl>evidently</gl></li>
-								<li>missing other tenses, etc.: <ex class="bad">эчү</ex>, <ex class="bad">эген</ex>, <ex class="bad">өө</ex>, <ex class="bad">эш</ex>, <ex class="bad">ээр</ex>, etc.</li>
-								<li>no negative forms: <ex class="bad">эбеле</ex></.i>
-							</ul>
-							<li>The problem:</li>
-							<ul>
-								<li>To make present and past copula parallel in UD, they must be tokenised equivalently:</li>
-							</ul>
+							<li>The problem: tokenise present and past in parallel way</li>
 							<li class="fragment" data-fragment-index="2">A solution: supertokens</li>
 						</ul>
 						<div class="float-left">
@@ -208,7 +212,6 @@
 # labels = cg-checked-jnw dep-tocheck
 # text[gloss] = I at.home was .
 1	Мен	мен	PRON	_	_	2	nsubj	_	_
-2-3	үйдөмүн	_	_	_	_	_	_	_	_
 2	үйдө	үй	NOUN	_	_	0	root	_	_
 3	элем	э	AUX	_	_	2	cop	_	_
 4	.	.	PUNCT	_	_	2	punct	_	_
@@ -218,8 +221,52 @@
 				</section>
 
 				<section>
-					<h2>Challenges: copula vs. other copula-like verbs</h2>
+					<h2>Challenges: <ex>э-</ex> vs. other copula-like verbs</h2>
 					
+											<div class="float-left">
+							<ex>Мен үйдө<u>мүн</u>.</ex> <gl>I <u>am</u> at home.</gl><br/>
+							<pre><code class="conllu">
+# labels = cg-checked-jnw dep-tocheck
+# text[gloss] = I at.home am .
+1	Мен	мен	PRON	_	_	2	nsubj	_	_
+2-3	үйдөмүн	_	_	_	_	_	_	_	_
+2	үйдө	үй	NOUN	_	_	0	root	_	_
+3	мүн	э	AUX	_	_	2	cop	_	_
+4	.	.	PUNCT	_	_	2	punct	_	_
+							</code></pre>
+							<ex>Мен үйдө <u>болом</u>.</ex> <gl>I <u>am / will be</u> at home.</gl><br/>
+							<pre><code class="conllu">
+# labels = cg-checked-jnw dep-tocheck
+# text[gloss] = I at.home am .
+1	Мен	мен	PRON	_	_	3	nsubj	_	_
+2	үйдө	үй	NOUN	_	_	3	xcomp	_	_
+3	болом	бол	AUX	_	_	0	root	_	_
+4	.	.	PUNCT	_	_	3	punct	_	_
+							</code></pre>
+
+						</div>
+						<div class="float-right">
+							<ex>Мен үйдө <u>элем</u>.</ex> <gl>I <u>was</u> at home.</gl>
+							<pre><code class="conllu">
+# labels = cg-checked-jnw dep-tocheck
+# text[gloss] = I at.home was .
+1	Мен	мен	PRON	_	_	2	nsubj	_	_
+2	үйдө	үй	NOUN	_	_	0	root	_	_
+3	элем	э	AUX	_	_	2	cop	_	_
+4	.	.	PUNCT	_	_	2	punct	_	_
+							</code></pre>
+
+							<ex>Мен үйдө <u>болдум</u>.</ex> <gl>I <u>was</u> at home.</gl>
+							<pre><code class="conllu">
+# labels = cg-checked-jnw dep-tocheck
+# text[gloss] = I at.home was .
+1	Мен	мен	PRON	_	_	3	nsubj	_	_
+2	үйдө	үй	NOUN	_	_	3	xcomp	_	_
+3	болдум	бол	AUX	_	_	0	root	_	_
+4	.	.	PUNCT	_	_	3	punct	_	_
+							</code></pre>
+
+						</div>
 					Мен үйдө элем.
 					Мен үйдө болдум.
 					Мен үйдөмүн.
@@ -364,8 +411,8 @@
 						<li>Can be read in English as "the person/thing/one"</li>
 						<li>Two options:</li>
 						<ul>
-							<li>Treat as noun (not present): <tt>@obj</tt></li>
-							<li>Treat simply as "clause": <tt>@ccomp</tt></li>
+							<li>Treat simply as "clause": <tt>ccomp</tt>, <tt>csubj</tt></li>
+							<li>Treat as noun (not present): <tt>obj</tt>, <tt>nsubj</tt> <span class="fragment">(<span class="highlight-green">✔</span>?)</span></li>
 						</ul>
 					</ul>
 					<pre><code class="conllu">
@@ -374,7 +421,7 @@
 # source = Сыргабековна&Сабыровна:283
 # text = Колуң менен кылганды, мойнуң менен тартасың.
 # text[eng] = You will pull with your neck what you make with your hands.
-# text[gloss] = your.hand with made⌷-ACC, your.neck with you.will.pull .
+# text[gloss] = your.hand with made.⌷-ACC, your.neck with you.will.pull .
 # labels = cg-checked-jnw dep-revised2x-jnw CHECK
 1	Колуң	кол	NOUN	_	Case=Nom|Number[psor]=Sing|Person[psor]=2	3	obl	_	_
 2	менен	менен	ADP	_	_	1	case	_	_
@@ -384,6 +431,22 @@
 6	менен	менен	ADP	_	_	5	case	_	_
 7	тартасың	тарт	VERB	_	Mood=Ind|Number=Sing|Person=2|Tense=Aor|VerbForm=Fin	0	root	_	_
 8	.	.	PUNCT	_	_	7	punct	_	_
+					</code></pre>
+					<pre><code class="conllu">
+# sent_id = proverbs:16
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:84
+# text = Балалуу болбогон кубанганды билбеген.
+# text[gloss] = child with not.being.⌷ being.happy-ACC has.not.known .
+# text[eng] = One who has not had children has not known being happy.
+# labels = cg-checked-jnw dep-checked-jnw
+1-2	Балалуу	_	_	_	_	_	_	_	_
+1	Бала	бала	NOUN	_	_	3	xcomp	_	_
+2	луу	луу	ADP	_	_	1	case	_	_
+3	болбогон	бол	VERB	_	Case=Nom|Polarity=Neg|Tense=Past|VerbForm=Part	5	nsubj/csubj??	_	_
+4	кубанганды	кубан	VERB	_	Case=Acc|Tense=Past|VerbForm=Ger	5	obj	_	_
+5	билбеген	бил	VERB	_	Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Past|VerbForm=Fin	0	root	_	_
+6	.	.	PUNCT	_	_	5	punct	_	_
 					</code></pre>
 				</section>
 
