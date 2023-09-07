@@ -277,10 +277,10 @@ ex {
 	color: lightgreen ;
 	font-style: italic;
 	/* font-weight: bold ; */
-	text-align: left !important ;
+/*	text-align: left !important ; */
 	width: 0% ;
-	display: block ;
-	margin-left: 2.25em;
+/*	display: block ;
+	margin-left: 2.25em; */
 }
 ex.white {
 	color: white !important ;
@@ -784,4 +784,8 @@ pre.code-wrapper {
 
 div.haserror > svg {
 	border: none !important;
+}
+
+.sentnum a text {
+	fill: white;
 }

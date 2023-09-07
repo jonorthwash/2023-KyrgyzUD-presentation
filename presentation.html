@@ -83,7 +83,7 @@
 						<img class="noframe" src="img/Apertium_logo_darkbg.svg" style="height: 5em;"/ -->
 
 					<div style="width: 98%; background: white; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em;">
-						<img class="noframe" src="img/Manas_University_logo.png" style="padding: 3px; background: none; border: none; height: 5em;"/>
+						<img class="noframe" src="img/Manas_University_logo.png" style="padding: 3px; background: none; border: none; height: 5em; margin-right: 1em;"/>
 						<img class="noframe" src="img/swarthmorelogowhite.svg" style="padding: 3px; background: none; border: none; height: 5em;"/>
 						<img class="noframe" src="img/Apertium_logo_lightbg.svg" style="padding: 3px; background: none; border: none; height: 5em;"/>
 					</div>
@@ -228,11 +228,91 @@
 				</section>
 
 				<section>
-					<h2> Challenges: copula tokenisation</h2>
+					<h2>Challenges: copula tokenisation</h2>
+						<ul>
+							<li>Defective verb <ex>э</ex>:</li>
+							<ul>
+								<li><span class="highlight">non-past tense</span>: copula endings on predicate</li>
+								<li><span class="highlight">direct past tense</span>: <ex>эле</ex> (not <ex class="bad">эди</ex>) + past-tense person endings</li>
+								<li>irregular-looking <span class="highlight">past verbal noun</span>: <ex>экен</ex> (not <ex class="bad">эген</ex>)</li>
+								<li>other words derived from <ex>э</ex>: <ex>эмес</ex> <gl>not</gl>, <ex>экен</ex> <gl>evidently</gl></li>
+								<li>missing other tenses, etc.: <ex class="bad">эчү</ex>, <ex class="bad">эген</ex>, <ex class="bad">өө</ex>, <ex class="bad">эш</ex>, <ex class="bad">ээр</ex>, etc.</li>
+								<li>no negative forms: <ex class="bad">эбеле</ex></.i>
+							</ul>
+							<li>The problem:</li>
+							<ul>
+								<li>To make present and past copula parallel in UD, they must be tokenised equivalently:</li>
+							</ul>
+							<li class="fragment" data-fragment-index="2">A solution: supertokens</li>
+						</ul>
+						<div class="float-left">
+							<ex>Мен үйдө<u>мүн</u>.</ex> <gl>I <u>am</u> at home.</gl><br/>
+							<pre class="fragment" data-fragment-index="2"><code class="conllu">
+# labels = cg-checked-jnw dep-tocheck
+# text[gloss] = I at.home am .
+1	Мен	мен	PRON	_	_	2	nsubj	_	_
+2-3	үйдөмүн	_	_	_	_	_	_	_	_
+2	үйдө	үй	NOUN	_	_	0	root	_	_
+3	мүн	э	AUX	_	_	2	cop	_	_
+4	.	.	PUNCT	_	_	2	punct	_	_
+							</code></pre>
+						</div>
+						<div class="float-right">
+							<ex>Мен үйдө <u>элем</u>.</ex> <gl>I <u>was</u> at home.</gl>
+							<pre class="fragment" data-fragment-index="2"><code class="conllu">
+# labels = cg-checked-jnw dep-tocheck
+# text[gloss] = I at.home was .
+1	Мен	мен	PRON	_	_	2	nsubj	_	_
+2-3	үйдөмүн	_	_	_	_	_	_	_	_
+2	үйдө	үй	NOUN	_	_	0	root	_	_
+3	элем	э	AUX	_	_	2	cop	_	_
+4	.	.	PUNCT	_	_	2	punct	_	_
+							</code></pre>
+						</div>
+
+				</section>
+
+				<section>
+					<h2>Challenges: copula vs. other copula-like verbs</h2>
+					
+					Мен үйдө элем.
+					Мен үйдө болдум.
+					Мен үйдөмүн.
+					Мен үйдө болом.
 				</section>
 
 				<section>
 					<h2> Challenges: analysis of fragments</h2>
+					<pre><code class="conllu">
+# sent_id = proverbs:34
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:259
+# text = Канга - кан.
+# text[eng] = Blood for blood. 
+# text[gloss] = for.blood blood .
+# labels = cg-checked-jnw dep-initialchecked-jnw
+1	Канга	кан	NOUN	_	Case=Dat	2	obl	_	_
+2	кан	кан	NOUN	_	Case=Nom	0	root	_	_
+3	.	.	PUNCT	_	_	2	punct	_	_
+					</code></pre>
+					<pre><code class="conllu">
+# sent_id = proverbs:52
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:117
+# text = Бирөө баары үчүн, баары бирөө үчүн.
+# text[eng] = One for all, all for one.
+# text[gloss] = one all for , all one for .
+# labels = cg-checked-jnw dep-checked-jnw
+1	Бирөө	бир	PRON	_	Case=Nom|PronType=Ind	2	nsubj	_	_
+2	баары	баары	PRON	_	Case=Nom|PronType=Ind	0	root	_	_
+3	үчүн	үчүн	ADP	_	_	2	post	_	_
+4	,	,	PUNCT	_	_	2	punct	_	_
+5	баары	баары	PRON	_	Case=Nom|PronType=Ind	6	nsubj	_	_
+6	бирөө	бир	PRON	_	Case=Nom|PronType=Ind	2	parataxis	_	_
+7	үчүн	үчүн	ADP	_	_	6	post	_	_
+8	.	.	PUNCT	_	_	6	punct	_	_
+					</code></pre>
+
 				</section>
 
 				<section>
