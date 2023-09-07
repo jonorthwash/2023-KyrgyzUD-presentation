@@ -739,7 +739,7 @@ svg {
 }
 
 text {
-	font-size: 24px;
+	font-size: 28px;
 }
 
 .arcs text {
@@ -754,7 +754,7 @@ text {
 }
 
 .span text {
-	font-size: 24px;
+	font-size: 22px;
 }
 
 path {
