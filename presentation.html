@@ -131,6 +131,20 @@
 				<section>
 					<h2>Genres: pros and cons</h2>
 
+					<div class="box-red">
+						<h3>Cons</h3>
+						<ul>
+							<li>Mostly short, declarative sentences</li>
+							<ul>
+								<li>Missing a wide range of structures, morphology, etc.</li>
+							</ul>
+							<li>Very literary language:</li>
+							<ul>
+								<li>Words uncommon in everyday language</li>
+								<li>Structures not typically found in speech</li>
+							</ul>
+						</ul>
+					</div>
 					<div class="box">
 						<h3>Pros</h3>
 						<ul>
@@ -156,89 +170,6 @@
 8	.	.	PUNCT	_	_	6	punct	_	_
 						</code></pre>
 					</div>
-
-					<div class="box-red">
-						<h3>Cons</h3>
-						<ul>
-							<li>Mostly short, declarative sentences</li>
-							<ul>
-								<li>Missing a wide range of structures, morphology, etc.</li>
-							</ul>
-							<li>Very literary language:</li>
-							<ul>
-								<li>Words uncommon in everyday language</li>
-								<li>Structures not typically found in speech</li>
-							</ul>
-						</ul>
-					</div>
-				</section>
-
-				<section>
-					<section>
-					<h2>Challenges: direction of parataxis attachment</h2>
-					<pre><code class="conllu">
-# sent_id = proverbs:0
-# text = Жип кессең - узун кес, кеп салсаң - кыска сал.
-# text[eng] = If you cut a thread, cut it long; if you make a speech, make it short.
-# text[gloss] = thread if.you.cut - long cut, speech if.you.put.in - short put.in .
-# labels = cg-checked-jnw dep-checked-jnw
-1	Жип	жип	NOUN	_	Case=Nom	_	obj	_	_
-2	кессең	кес	VERB	_	Mood=Cnd|Number=Sing|Person=2|VerbForm=Conv	5	advcl	_	_
-3	-	-	PUNCT	_	_	_	punct	_	_
-4	узун	узун	ADJ	_	_	_	xcomp	_	_
-5	кес	кес	VERB	_	Mood=Imp|Number=Sing|Person=2|VerbForm=Fin	0	root	_	_
-6	,	,	PUNCT	_	_	_	punct	_	_
-7	кеп	кеп	NOUN	_	Case=Nom	_	obj	_	_
-8	салсаң	сал	VERB	_	Mood=Cnd|Number=Sing|Person=2|VerbForm=Conv	11	advcl	_	_
-9	-	-	PUNCT	_	_	_	punct	_	_
-10	кыска	кыска	ADJ	_	_	_	xcomp	_	_
-11	сал	сал	VERB	_	Mood=Imp|Number=Sing|Person=2|VerbForm=Fin	5	parataxis	_	_
-12	.	.	PUNCT	_	_	_	punct	_	_
-					</code></pre>
-					<pre><code class="conllu">
-# sent_id = proverbs:41
-# author = Сыргабековна&Сабыровна
-# source = Сыргабековна&Сабыровна:66
-# text = Ачуу - душман, акыл - дос, акылыңа акыл кош.
-# text[eng] = Wrath is an enemy, wisdom(/reason) is a friend; add wisdom to your wisdom.
-# text[gloss] = wrath - enemy is, wisdom - friend is , to.your.wisdom wisdom add .
-# labels = cg-checked-jnw dep-revised1x-jnw
-1	Ачуу	ачуу	NOUN	_	Case=Nom	_	nsubj	_	_
-2	-	-	PUNCT	_	_	_	punct	_	_
-3-4	душман	_	_	_	_	_	_	_	_
-3	душман	душман	NOUN	_	Case=Nom	8	parataxis	_	_
-4	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	_	cop	_	_
-5	,	,	PUNCT	_	_	_	punct	_	_
-6	акыл	акыл	NOUN	_	Case=Nom	_	nsubj	_	_
-7	-	-	PUNCT	_	_	_	punct	_	_
-8-9	дос	_	_	_	_	_	_	_	_
-8	дос	дос	NOUN	_	_	13	parataxis	_	_
-9	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	_	cop	_	_
-10	,	,	PUNCT	_	_	_	punct	_	_
-11	акылыңа	акыл	NOUN	_	Case=Dat|Number[psor]=Sing|Person[psor]=2	_	obl	_	_
-12	акыл	акыл	NOUN	_	Case=Nom	__	obj	_	_
-13	кош	кош	VERB	_	Mood=Imp|Number=Sing|Person=2|VerbForm=Fin	0	root	_	_
-14	.	.	PUNCT	_	_	_	punct	_	_
-					</code></pre>
-					</section>
-					<section>
-						<pre><code class="conllu">
-# sent_id = proverbs:53
-# author = Сыргабековна&Сабыровна
-# source = Сыргабековна&Сабыровна:4
-# text = Адам өлсө өлөт, үмүт өлбөйт
-# text[eng] = When a person dies, they die but hope doesn't die.
-# text[gloss] = person when.dies dies , hope dies.not .
-# labels = cg-checked-jnw dep-tocheck
-1	Адам	адам	NOUN	_	Case=Nom	2	nsubj	_	_
-2	өлсө	өл	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Cov	3	advcl	_	_
-3	өлөт	өл	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	6	parataxis	_	_
-4	,	,	PUNCT	_	_	6	punct	_	_
-5	үмүт	үмүт	NOUN	_	Case=Nom	6	nsubj	_	_
-6	өлбөйт	өл	VERB	_	Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Aor|VerbForm=Fin	0	root	_	_
-7	.	.	PUNCT	_	_	6	punct	_	_
-						</code></pre>
-					</section>
 				</section>
 
 				<section>
@@ -293,6 +224,72 @@
 					Мен үйдө болдум.
 					Мен үйдөмүн.
 					Мен үйдө болом.
+				</section>
+
+
+
+				<section>
+					<h2>Challenges: direction of parataxis (conjunct??) attachment</h2>
+					<pre><code class="conllu">
+# sent_id = proverbs:0
+# text = Жип кессең - узун кес, кеп салсаң - кыска сал.
+# text[eng] = If you cut a thread, cut it long; if you make a speech, make it short.
+# text[gloss] = thread if.you.cut - long cut, speech if.you.put.in - short put.in .
+# labels = cg-checked-jnw dep-checked-jnw
+1	Жип	жип	NOUN	_	Case=Nom	_	obj	_	_
+2	кессең	кес	VERB	_	Mood=Cnd|Number=Sing|Person=2|VerbForm=Conv	5	advcl	_	_
+3	-	-	PUNCT	_	_	_	punct	_	_
+4	узун	узун	ADJ	_	_	_	xcomp	_	_
+5	кес	кес	VERB	_	Mood=Imp|Number=Sing|Person=2|VerbForm=Fin	0	root	_	_
+6	,	,	PUNCT	_	_	_	punct	_	_
+7	кеп	кеп	NOUN	_	Case=Nom	_	obj	_	_
+8	салсаң	сал	VERB	_	Mood=Cnd|Number=Sing|Person=2|VerbForm=Conv	11	advcl	_	_
+9	-	-	PUNCT	_	_	_	punct	_	_
+10	кыска	кыска	ADJ	_	_	_	xcomp	_	_
+11	сал	сал	VERB	_	Mood=Imp|Number=Sing|Person=2|VerbForm=Fin	5	parataxis	_	_
+12	.	.	PUNCT	_	_	_	punct	_	_
+					</code></pre>
+					<pre><code class="conllu">
+# sent_id = proverbs:41
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:66
+# text = Ачуу - душман, акыл - дос, акылыңа акыл кош.
+# text[eng] = Wrath is an enemy, wisdom(/reason) is a friend; add wisdom to your wisdom.
+# text[gloss] = wrath - enemy is, wisdom - friend is , to.your.wisdom wisdom add .
+# labels = cg-checked-jnw dep-revised1x-jnw
+1	Ачуу	ачуу	NOUN	_	Case=Nom	_	nsubj	_	_
+2	-	-	PUNCT	_	_	_	punct	_	_
+3-4	душман	_	_	_	_	_	_	_	_
+3	душман	душман	NOUN	_	Case=Nom	8	parataxis	_	_
+4	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	_	cop	_	_
+5	,	,	PUNCT	_	_	_	punct	_	_
+6	акыл	акыл	NOUN	_	Case=Nom	_	nsubj	_	_
+7	-	-	PUNCT	_	_	_	punct	_	_
+8-9	дос	_	_	_	_	_	_	_	_
+8	дос	дос	NOUN	_	_	13	parataxis	_	_
+9	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	_	cop	_	_
+10	,	,	PUNCT	_	_	_	punct	_	_
+11	акылыңа	акыл	NOUN	_	Case=Dat|Number[psor]=Sing|Person[psor]=2	_	obl	_	_
+12	акыл	акыл	NOUN	_	Case=Nom	__	obj	_	_
+13	кош	кош	VERB	_	Mood=Imp|Number=Sing|Person=2|VerbForm=Fin	0	root	_	_
+14	.	.	PUNCT	_	_	_	punct	_	_
+					</code></pre>
+						<pre><code class="conllu">
+# sent_id = proverbs:53
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:4
+# text = Адам өлсө өлөт, үмүт өлбөйт
+# text[eng] = When a person dies, they die but hope doesn't die.
+# text[gloss] = person when.dies dies , hope dies.not .
+# labels = cg-checked-jnw dep-tocheck
+1	Адам	адам	NOUN	_	Case=Nom	2	nsubj	_	_
+2	өлсө	өл	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Cov	3	advcl	_	_
+3	өлөт	өл	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	6	parataxis	_	_
+4	,	,	PUNCT	_	_	6	punct	_	_
+5	үмүт	үмүт	NOUN	_	Case=Nom	6	nsubj	_	_
+6	өлбөйт	өл	VERB	_	Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Aor|VerbForm=Fin	0	root	_	_
+7	.	.	PUNCT	_	_	6	punct	_	_
+						</code></pre>
 				</section>
 
 				<section>
