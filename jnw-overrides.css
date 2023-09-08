@@ -789,3 +789,7 @@ div.haserror > svg {
 .sentnum a text {
 	fill: white;
 }
+
+pre.code-wrapper {
+	margin: 0;
+}

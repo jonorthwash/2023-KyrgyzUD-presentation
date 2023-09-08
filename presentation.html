@@ -222,10 +222,9 @@
 
 				<section>
 					<h2>Challenges: <ex>э-</ex> vs. other copula-like verbs</h2>
-					
-											<div class="float-left">
-							<ex>Мен үйдө<u>мүн</u>.</ex> <gl>I <u>am</u> at home.</gl><br/>
-							<pre><code class="conllu">
+					<div class="float-left">
+						<ex>Мен үйдө<u>мүн</u>.</ex> <gl>I <u>am</u> at home.</gl><br/>
+						<pre><code class="conllu">
 # labels = cg-checked-jnw dep-tocheck
 # text[gloss] = I at.home am .
 1	Мен	мен	PRON	_	_	2	nsubj	_	_
@@ -233,44 +232,49 @@
 2	үйдө	үй	NOUN	_	_	0	root	_	_
 3	мүн	э	AUX	_	_	2	cop	_	_
 4	.	.	PUNCT	_	_	2	punct	_	_
-							</code></pre>
-							<ex>Мен үйдө <u>болом</u>.</ex> <gl>I <u>am / will be</u> at home.</gl><br/>
-							<pre><code class="conllu">
+						</code></pre>
+						<ex>Мен үйдө <u>болом</u>.</ex> <gl>I <u>am / will be</u> at home.</gl><br/>
+						<pre><code class="conllu">
 # labels = cg-checked-jnw dep-tocheck
 # text[gloss] = I at.home am .
 1	Мен	мен	PRON	_	_	3	nsubj	_	_
 2	үйдө	үй	NOUN	_	_	3	xcomp	_	_
 3	болом	бол	AUX	_	_	0	root	_	_
 4	.	.	PUNCT	_	_	3	punct	_	_
-							</code></pre>
-
-						</div>
-						<div class="float-right">
-							<ex>Мен үйдө <u>элем</u>.</ex> <gl>I <u>was</u> at home.</gl>
-							<pre><code class="conllu">
+						</code></pre>
+					</div>
+					<div class="float-right">
+						<ex>Мен үйдө <u>элем</u>.</ex> <gl>I <u>was</u> at home.</gl>
+						<pre><code class="conllu">
 # labels = cg-checked-jnw dep-tocheck
 # text[gloss] = I at.home was .
 1	Мен	мен	PRON	_	_	2	nsubj	_	_
 2	үйдө	үй	NOUN	_	_	0	root	_	_
 3	элем	э	AUX	_	_	2	cop	_	_
 4	.	.	PUNCT	_	_	2	punct	_	_
-							</code></pre>
-
-							<ex>Мен үйдө <u>болдум</u>.</ex> <gl>I <u>was</u> at home.</gl>
-							<pre><code class="conllu">
+						</code></pre>
+						<ex>Мен үйдө <u>болдум</u>.</ex> <gl>I <u>was</u> at home.</gl>
+						<pre><code class="conllu">
 # labels = cg-checked-jnw dep-tocheck
 # text[gloss] = I at.home was .
 1	Мен	мен	PRON	_	_	3	nsubj	_	_
 2	үйдө	үй	NOUN	_	_	3	xcomp	_	_
 3	болдум	бол	AUX	_	_	0	root	_	_
 4	.	.	PUNCT	_	_	3	punct	_	_
-							</code></pre>
+						</code></pre>
+					</div>
 
-						</div>
-					Мен үйдө элем.
-					Мен үйдө болдум.
-					Мен үйдөмүн.
-					Мен үйдө болом.
+					<!-- div>
+						<ex>Мен үйдө <u>болуп жатам</u>.</ex> <gl>I <u>am being</u> at home.</gl>
+						<pre><code class="conllu">
+# labels = cg-checked-jnw dep-tocheck
+# text[gloss] = I at.home was .
+1	Мен	мен	PRON	_	_	3	nsubj	_	_
+2	үйдө	үй	NOUN	_	_	3	xcomp	_	_
+3	болдум	бол	AUX	_	_	0	root	_	_
+4	.	.	PUNCT	_	_	3	punct	_	_
+						</code></pre>
+					</div -->
 				</section>
 
 
@@ -374,15 +378,15 @@
 				</section>
 
 				<section>
-					<h2> Challenges: small words: эле</h2>
+					<h2>Challenges: small words: эле</h2>
 				</section>
 
 				<section>
-					<h2> Challenges: small words: да</h2>
+					<h2>Challenges: small words: да</h2>
 				</section>
 
 				<section data-state="show-bar">
-					<h2> Challenges: small words: бар/жок</h2>
+					<h2>Challenges: small words: бар/жок</h2>
 					<pre id="showbar"><code class="conllu">
 # sent_id = proverbs:47
 # author = Сыргабековна&Сабыровна
@@ -422,29 +426,30 @@
 				</section>
 
 				<section>
-					<h2></h2>
+					<h2>Challenges: small words: керек</h2>
 					<pre><code class="conllu">
-# sent_id = proverbs:22
-# author = Сыргабековна&Сабыровна
-# source = Сыргабековна&Сабыровна:465
-# text = Шашкан шайтандын иши.
-# text[gloss] = rushing shaytan's work is .
-# text[eng] = Hurrying is what a shaytan does. / Hurrying is the devil's work.
-# labels = cg-checked-jnw dep-checked-jnw
-1	Шашкан	шаш	VERB	_	Case=Nom|Tense=Past|VerbForm=Ger	3	csubj	_	_
-2	шайтандын	шайтан	NOUN	_	Case=Gen	3	nmod:poss	_	_
-3-4	иши	_	_	_	_	_	_	_	_
-3	иши	иш	NOUN	_	Case=Nom|Number[psor]=Plur,Sing|Person[psor]=3	0	root	_	_
-4	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	3	cop	_	_
-5	.	.	PUNCT	_	_	3	punct	_	
+# text[gloss] = I to.my.family needed am .
+1	Мен	_	PRON	_	_	3	nsubj	_	_
+2	үй-бүлөмө	_	NOUN	_	_	3	obl	_	_
+3-4	керекмин	_	_	_	_	_	_	_	_
+3	керек	керек	ADJ	_	_	0	root	_	_
+4	мин	э	AUX	_	_	3	cop	_	_
+5	.	_	PUNCT	_	_	3	punct	_	_
 					</code></pre>
-					<pre><!-- code class="sdparse">Шашкан шайтандын иши _ . \n rushing shaytan's work is .
-						csubj(иши,Шашкан)
-					</code --></pre>
+					<pre><code class="conllu">
+# text[gloss] = I book-ACC my.turning.in needed is .
+1	Мен	_	PRON	_	_	3	nsubj	_	_
+2	китепти	_	NOUN	_	_	3	obj	_	_
+3	тапшырышым	_	VERB	_	_	4	csubj	_	_
+4	керек	_	ADJ	_	_	_	_	_	_
+5	_	э	AUX	_	_	4	cop	_	_
+6	.	_	PUNCT	_	_	4	punct	_	_
+					</pre></code>
 				</section>
 
 				<section>
-					<h2>Substantivised verbal adjectives</h2>
+					<section>
+					<h2>Challenges: substantivised verbal adjectives</h2>
 					<ul>
 						<li>Verbal adjectives with "empty head"</li>
 						<li>Can be read in English as "the person/thing/one"</li>
@@ -486,6 +491,82 @@
 4	кубанганды	кубан	VERB	_	Case=Acc|Tense=Past|VerbForm=Ger	5	obj	_	_
 5	билбеген	бил	VERB	_	Mood=Ind|Number=Sing|Person=3|Polarity=Neg|Tense=Past|VerbForm=Fin	0	root	_	_
 6	.	.	PUNCT	_	_	5	punct	_	_
+					</code></pre>
+					</section>
+					<section>
+										<pre><code class="conllu">
+# sent_id = proverbs:22
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:465
+# text = Шашкан шайтандын иши.
+# text[gloss] = rushing shaytan's work is .
+# text[eng] = Hurrying is what a shaytan does. / Hurrying is the devil's work.
+# labels = cg-checked-jnw dep-checked-jnw
+1	Шашкан	шаш	VERB	_	Case=Nom|Tense=Past|VerbForm=Ger	3	csubj	_	_
+2	шайтандын	шайтан	NOUN	_	Case=Gen	3	nmod:poss	_	_
+3-4	иши	_	_	_	_	_	_	_	_
+3	иши	иш	NOUN	_	Case=Nom|Number[psor]=Plur,Sing|Person[psor]=3	0	root	_	_
+4	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	3	cop	_	_
+5	.	.	PUNCT	_	_	3	punct	_	
+					</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Challenges: Auxiliary constructions</h2>
+					<ul style="width: 100%">
+						<li>INF + AUX very common in Kyrgyz:<br/>
+						<ex>презентация <u>берип жатам</u></ex> <gl>I <u>am giving</u> a presentation</gl></li>
+						<li>Problems for annotation:</li>
+						<ul class="shrink">
+							<li>With VADJ AUX (relative clauses), <tt>acl</tt> is attached to INF</li>
+						</ul>
+					</ul>
+
+
+					<pre><code class="conllu">
+# sent_id = proverbs:76
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:49
+# text = Алыстагы душмандан аңдып жүргөн дос жаман.
+# text[gloss] = far.away-LOC.ATTR enemy-ABL spy-INF go-VADJ friend bad is .
+# text[eng] = A friend who spies on you is worse than an enemy who's far away. 
+# labels = cg-checked-jnw dep-checked-jnw
+1	Алыстагы	алыс	ADJ	_	Case=Loc|Case=Nom	2	nmod:lmod	_	_
+2	душмандан	душман	NOUN	_	Case=Abl	6	obl:comp	_	_
+3	аңдып	аңды	VERB	_	Aspect=Perf|VerbForm=Cov	5	acl	_	_
+4	жүргөн	жүр	AUX	_	Tense=Past|VerbForm=Part	3	aux	_	_
+5	дос	дос	NOUN	_	Case=Nom	6	nsubj	_	_
+6-7	жаман	_	_	_	_	_	_	_	_
+6	жаман	жаман	ADJ	_	_	0	root	_	_
+7	_	э	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Aor|VerbForm=Fin	6	cop	_	_
+8	.	.	PUNCT	_	_	6	punct	_	_
+					</code></pre>
+
+					<ul style="width: 100%">
+						<ul class="shrink">
+							<li>Is <ex>э-</ex> an auxiliary (e.g., pluperfect construction)? <!-- Ал жакка барган элем. -->
+						</ul>
+					</ul>
+					<pre><code class="conllu">
+1	Ал	_	DET	_	_	2	det	_	_
+2	жакка	_	NOUN	_	_	3	obl	_	_
+3	барган	_	VERB	_	_	0	root	_	_
+4	элем	_	AUX	_	_	3	aux	_	_
+5	.	_	PUNCT	_	_	3	punct	_	_
+					</code></pre>
+					<ul style="width: 100%">
+						<ul class="shrink">
+
+							<li>What about synthetic negative?  Can we treat whole thing as one verb form?
+
+						</ul>
+					</ul>
+					<pre><code class="conllu">
+1	Ал	_	DET	_	_	2	det	_	_
+2	жакка	_	NOUN	_	_	3	obl	_	_
+3	барган эмес элем	_	VERB	_	_	0	root	_	_
+4	.	_	PUNCT	_	_	3	punct	_	_
 					</code></pre>
 				</section>
 
