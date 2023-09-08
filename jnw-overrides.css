@@ -109,7 +109,25 @@ bbb {
 	text-shadow: silver 1px 0 10px ;
 }
 .highlight-box{
-	border: 3px solid yellow;
+	/** border: 3px solid orange; **/
+	border: 3px solid lightgreen;
+	border-radius: 8pt;
+	margin-bottom: 0.5em;
+}
+
+.highlight-box h4 {
+	text-transform: none !important;
+	text-align: center !important;
+	border-bottom: 2px solid white;
+	background-color: rgba(150, 150, 150, 0.2) ; /* #555 ; */
+	text-shadow: 5px 5px 10px black;
+	color: lightgreen;
+}
+
+.box h4 {
+	text-transform: none !important;
+	text-align: center !important;
+	border-bottom: 2px solid grey;
 }
 tr.greyedout td {
 	color: #666;
@@ -792,4 +810,32 @@ div.haserror > svg {
 
 pre.code-wrapper {
 	margin: 0;
+	margin-bottom: 1em;
+	margin-top: -1em;
+}
+.box pre.code-wrapper {
+	margin-bottom: -0.4em;
+}
+
+.highlight-box pre.code-wrapper:first-of-type {
+	margin-top: -2em;
+}
+.highlight-box pre.code-wrapper:last-of-type {
+	margin-bottom: 0em;
+}
+
+.highlight-box h4 tt {
+	font-size: 70% !important;
+}
+
+g.text text:nth-of-type(2) tspan {
+	fill: silver;
+}
+
+.background1 {
+	opacity: 0;
+}
+
+.r-stack {
+	align-items: start;
 }

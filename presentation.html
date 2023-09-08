@@ -379,14 +379,101 @@
 
 				<section>
 					<h2>Challenges: small words: эле</h2>
+					<div class="box">
+					<h3>occurs after</h3>
+					<ul>
+						<li>nouns: <ex>бала эле</ex> <gl>just a child</gl></li>
+						<li>adjectives: <ex>кичинекей эле</ex> <gl>not that big</gl></li>
+						<li>numbers: <ex>эки эле</ex> <gl>just two</gl></li>
+						<li>adverbs: <ex>кечээ эле</ex> <gl>just yesterday</gl></li>
+						<li>adverbial clauses: <ex>үч күн өткөндөн кийин эле</ex> <gl>only after three days passing</gl></li>
+					</ul>
+					</div>
+					<div class="highlight-box">
+					<h4>PART, <tt>advmod</tt>?</h4>
+					<pre><code class="conllu">
+# text[gloss] = three day pass-VN-ABL after just book-ACC I.turned.in .
+1	үч	_	NUM	_	_	2	nummod	_	_
+2	күн	_	NOUN	_	_	3	nsubj	_	_
+3	өткөндөн	_	VERB	_	_	7	advcl	_	_
+4	кийин	_	ADP	_	_	3	case	_	_
+5	эле	_	PART	_	_	3	advmod	_	_
+6	китепти	_	NOUN	_	_	7	obj	_	_
+7	тапшырдым	_	VERB	_	_	0	root	_	_
+8	.	_	PUNCT	_	_	7	punct	_	_
+					</code></pre>
+					</div>
 				</section>
 
 				<section>
 					<h2>Challenges: small words: да</h2>
+					<div class="highlight-box">
+						<h4>"even (if)" - SCONJ, <tt>advmod</tt>?</h4>
+						<pre><code class="conllu">
+# sent_id = proverbs:15
+# author = Сыргабековна&Сабыровна
+# source = Сыргабековна&Сабыровна:342
+# text = Оозу кыйшык болсо да, байдын уулу сүйлөсүн.
+# text[gloss] = his.mouth crooked if.it.is even , rich-GEN his.son let.him.speak .
+# text[eng] = Even if his mouth is crooked, let the rich person's son speak.
+# labels = cg-checked-jnw dep-checked-jnw
+1	Оозу	ооз	NOUN	_	Case=Nom|Number[psor]=Plur,Sing|Person[psor]=3	3	nsubj	_	_
+2	кыйшык	кыйшык	ADJ	_	_	3	xcomp	_	_
+3	болсо	бол	VERB	_	Mood=Cnd|Number=Sing|Person=3|VerbForm=Conv	8	advcl	_	_
+4	да	да	SCONJ	_	_	3	advmod	_	_
+5	,	,	PUNCT	_	_	_	punct	_	_
+6	байдын	бай	ADJ	_	Case=Gen	_	nmod:poss	_	_
+7	уулу	уул	NOUN	_	Case=Nom|Number[psor]=Plur,Sing|Person[psor]=3	_	nsubj	_	_
+8	сүйлөсүн	сүйлө	VERB	_	Mood=Opt|Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+9	.	.	PUNCT	_	_	8	punct	_	_
+						</pre></code>
+					</div>
+					<div class="highlight-box">
+						<h4>"even" - PART, <tt>advmod:emph</tt>?</h4>
+						<pre><code class="conllu">
+# text[gloss] = then those pictures in.the.papers even came.out .
+1	Кийин	_	ADV	_	_	_	advmod	_	_
+2	ошол	_	DET	_	_	3	det	_	_
+3	сүрөттөр	_	NOUN	_	_	6	nsubj	_	_
+4	гезиттерге	_	NOUN	_	_	6	obl	_	_
+5	да	_	PART	_	_	4	advmod:emph	_	_
+6	чыкты	_	VERB	_	_	0	root	_	_
+7	.	.	PUNCT	_	_	6	punct	_	_
+						</code></pre>
+					</div>
+					<div class="r-stack" style="width:100%">
+					<div class="highlight-box fragment current-visible" style="width:100%">
+						<h4>"even/also" - CCONJ, <tt>cc</tt>?</h4>
+						<pre><code class="conllu">
+# text[gloss] = my.father even/also against was .
+1	Атам	_	NOUN	_	_	4	nsubj	_	_
+2	да	_	CCONJ	_	_	1	cc	_	_
+3	каршы	_	ADJ	_	_	4	xcomp	_	_
+4	болду	_	VERB	_	_	0	root	_	_
+5	.	_	PUNCT	_	_	4	punct	_	_
+						</code></pre>
+					</div>
+					<div class="highlight-box fragment" style="width:100%">
+						<h4>"both … and" - CCONJ, <tt>cc</tt>?</h4>
+						<pre><code class="conllu">
+# text[gloss] = my.father and , my.mother and against were .
+1	Атам	_	NOUN	_	_	7	nsubj	_	_
+2	да	_	CCONJ	_	_	1	cc	_	_
+3	,	_	PUNCT	_	_	1	punct	_	_
+4	апам	_	NOUN	_	_	1	conj	_	_
+5	да	_	CCONJ	_	_	4	cc	_	_
+6	каршы	_	ADJ	_	_	7	xcomp	_	_
+7	болду	_	VERB	_	_	0	root	_	_
+8	.	_	PUNCT	_	_	7	punct	_	_
+						</code></pre>
+					</div>
+					</div>
 				</section>
 
 				<section data-state="show-bar">
 					<h2>Challenges: small words: бар/жок</h2>
+					<div class="highlight-box">
+						<h4>ADJ, <tt>acl</tt></h4>
 					<pre id="showbar"><code class="conllu">
 # sent_id = proverbs:47
 # author = Сыргабековна&Сабыровна
@@ -404,7 +491,9 @@
 6	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	5	cop	_	_
 7	.	.	PUNCT	_	_	5	punct	_	_
 					</code></pre>
-
+					</div>
+					<div class="highlight-box">
+						<h4>ADJ (SUBST, LOC), <tt>advcl</tt></h4>
 					<pre><code class="conllu">
 # sent_id = proverbs:2
 # author = Сыргабековна&Сабыровна
@@ -422,11 +511,13 @@
 6	_	э	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Aor|VerbForm=Fin	5	cop	_	_
 7	.	.	PUNCT	_	_	5	punct	_	_
 					</code></pre>
-
+					</div>
 				</section>
 
 				<section>
 					<h2>Challenges: small words: керек</h2>
+					<div class="highlight-box">
+						<h4>ADJ</h4>
 					<pre><code class="conllu">
 # text[gloss] = I to.my.family needed am .
 1	Мен	_	PRON	_	_	3	nsubj	_	_
@@ -445,6 +536,7 @@
 5	_	э	AUX	_	_	4	cop	_	_
 6	.	_	PUNCT	_	_	4	punct	_	_
 					</pre></code>
+					</div>
 				</section>
 
 				<section>
@@ -518,12 +610,13 @@
 						<li>INF + AUX very common in Kyrgyz:<br/>
 						<ex>презентация <u>берип жатам</u></ex> <gl>I <u>am giving</u> a presentation</gl></li>
 						<li>Problems for annotation:</li>
-						<ul class="shrink">
+						<!-- ul class="shrink">
 							<li>With VADJ AUX (relative clauses), <tt>acl</tt> is attached to INF</li>
-						</ul>
+						</ul -->
 					</ul>
 
-
+					<div class="highlight-box">
+						<h4>With VADJ AUX (relative clauses), <tt>acl</tt> is attached to INF</h4>
 					<pre><code class="conllu">
 # sent_id = proverbs:76
 # author = Сыргабековна&Сабыровна
@@ -542,38 +635,47 @@
 7	_	э	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Aor|VerbForm=Fin	6	cop	_	_
 8	.	.	PUNCT	_	_	6	punct	_	_
 					</code></pre>
+					</div>
 
-					<ul style="width: 100%">
+					<!-- ul style="width: 100%">
 						<ul class="shrink">
-							<li>Is <ex>э-</ex> an auxiliary (e.g., pluperfect construction)? <!-- Ал жакка барган элем. -->
+							<li>Is <ex>э-</ex> an auxiliary (e.g., pluperfect construction)? 
 						</ul>
-					</ul>
+					</ul -->
+					<div class="highlight-box">
+						<h4>Is <ex>э-</ex> an auxiliary (e.g., pluperfect construction)?</h4>
 					<pre><code class="conllu">
+# text[gloss] = that place-DAT go-PAST I.was .
 1	Ал	_	DET	_	_	2	det	_	_
 2	жакка	_	NOUN	_	_	3	obl	_	_
 3	барган	_	VERB	_	_	0	root	_	_
 4	элем	_	AUX	_	_	3	aux	_	_
 5	.	_	PUNCT	_	_	3	punct	_	_
 					</code></pre>
-					<ul style="width: 100%">
+					</div>
+					<!-- ul style="width: 100%">
 						<ul class="shrink">
 
 							<li>What about synthetic negative?  Can we treat whole thing as one verb form?
 
 						</ul>
-					</ul>
+					</ul -->
+					<div class="highlight-box">
+						<h4>What about synthetic negative?  Can we treat whole thing as one verb form?</h4>
 					<pre><code class="conllu">
+# text[gloss] = that place-DAT go-PAST_not_was-I .
 1	Ал	_	DET	_	_	2	det	_	_
 2	жакка	_	NOUN	_	_	3	obl	_	_
 3	барган эмес элем	_	VERB	_	_	0	root	_	_
 4	.	_	PUNCT	_	_	3	punct	_	_
 					</code></pre>
+					</div>
 				</section>
 
 				<section>
 					<h2>Challenges: level of analysis</h2>
-					<div class="box">
-						<h3>Inflected</h3>
+					<div class="highlight-box">
+						<h4>Inflected</h4>
 							<pre><code class="conllu">
 # text[gloss] = person error-less is.not , marsh frog-less is.not .
 1	Адам	адам	NOUN	n	_	4	nsubj	_	nom
@@ -590,8 +692,8 @@
 10	.	.	PUNCT	sent	_	9	punct	_	_
 						</code></pre>
 					</div>
-					<div class="box">
-						<h3>Derivational</h3>
+					<div class="highlight-box">
+						<h4>Derivational</h4>
 							<pre><code class="conllu">
 # text[gloss] = person errorless is.not , marsh frogless is.not .
 1	Адам	адам	NOUN	n	_	3	nsubj	_	nom
